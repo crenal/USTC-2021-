@@ -1,0 +1,6 @@
+最长公共子序列有4个
+
+CAABA
+CABAB
+DAABA
+DABAB
