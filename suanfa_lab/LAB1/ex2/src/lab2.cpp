@@ -11,9 +11,9 @@
 #include <chrono>
 using namespace std;
 
-ofstream outFile2("..\\output\\time.txt");
+ofstream outFile2("LAB1\\ex2\\output\\time.txt");
 void LCS_LENGTH(vector<char> x,vector<char> y);
-set<string> LCS;string path1="..\\output\\result_";string path2=".txt";string path;
+set<string> LCS;string path1="LAB1\\ex2\\output\\result_";string path2=".txt";string path;
 void PRINT_LCS(vector<vector<int> > b,string s,vector<char> x,int maxlength,int i,int j);
 int k;
 int main() 
@@ -23,7 +23,7 @@ int main()
     vector<char> a,b;
     FILE *data; 
     int i;
-    data=fopen("..\\input\\input.txt","r"); 
+    data=fopen("LAB1\\ex2\\input\\input.txt","r"); 
     if(!data){cout<<"open failed"<<endl;system("pause");exit(0);}
     for(i=1;i<=5;i++)
     {

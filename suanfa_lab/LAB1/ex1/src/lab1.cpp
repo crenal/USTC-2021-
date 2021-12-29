@@ -9,10 +9,10 @@ using namespace std;
 #define maxnum 9223372036854775805
 void MATRIX_CHAIN_ORDER(vector<int> b);   
 void PRINT_OPTIMAL_PARENS(vector<vector<int> > a,int i,int j);
-ofstream outFile("..\\output\\result.txt");
-ofstream outFile2("..\\output\\time.txt");
+ofstream outFile("suanfa_lab\\LAB1\\ex1\\output\\result.txt");
+ofstream outFile2("suanfa_lab\\LAB1\\ex1\\output\\time.txt");
 int main() {
-    ifstream data("..\\input\\1_1_input.txt"); //待读取文件的目录
+    ifstream data("suanfa_lab\\LAB1\\ex1\\input\\1_1_input.txt"); //待读取文件的目录
     vector<int> a;
     string line;
     while (getline(data, line)) 

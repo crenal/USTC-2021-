@@ -40,9 +40,9 @@ void UNION(node *x,node *y)
 }
 int main()
 {
-    ofstream outf("..\\output\\result.txt");
-    ofstream outf2("..\\output\\time.txt");
-    auto data=fopen("..\\input\\2_2_input.txt","r");    
+    ofstream outf("suanfa_lab\\LAB2\\ex2\\output\\result.txt");
+    ofstream outf2("suanfa_lab\\LAB2\\ex2\\output\\time.txt");
+    auto data=fopen("suanfa_lab\\LAB2\\ex2\\input\\2_2_input.txt","r");    
     if(!data){cout<<"open file failed"<<endl; exit(0);}
     int result=0;//结果（群体数）
     auto t1 = std::chrono::steady_clock::now();

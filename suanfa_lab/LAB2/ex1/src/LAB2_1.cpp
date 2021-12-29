@@ -263,9 +263,9 @@ int DELETE(Fib_Heap* heap,int y)//删除key为y的结点
     return(heap->n);
 }
 int main()
-{   ofstream outf("..\\output\\result.txt");
-    ofstream outf2("..\\output\\time.txt");
-    auto data=fopen("..\\input\\2_1_input.txt","r"); 
+{   ofstream outf("suanfa_lab\\LAB2\\ex1\\output\\result.txt");
+    ofstream outf2("suanfa_lab\\LAB2\\ex1\\output\\time.txt");
+    auto data=fopen("suanfa_lab\\LAB2\\ex1\\input\\2_1_input.txt","r"); 
     if(!data){cout<<"open file failed"<<endl; exit(0);}
     int n;
     auto H1=Createheap();//建堆
