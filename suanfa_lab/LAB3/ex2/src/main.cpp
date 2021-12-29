@@ -166,6 +166,7 @@ int main()
     auto data6=fopen("suanfa_lab\\LAB3\\ex2\\input\\input32.txt","r");
     auto data7=fopen("suanfa_lab\\LAB3\\ex2\\input\\input41.txt","r");
     auto data8=fopen("suanfa_lab\\LAB3\\ex2\\input\\input42.txt","r");
+    if (!data1) { cout << "open failed!";system("pause");exit(0); }
     int **map1;
     map1=new int*[size1];
     for(int i=0;i<size1;i++)map1[i]=new int[size1]; 
