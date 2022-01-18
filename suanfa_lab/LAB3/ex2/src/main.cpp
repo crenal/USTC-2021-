@@ -120,7 +120,7 @@ void DIJKSTRA(node* G,int** map,int s,int size)
     {
         Q.push_back(i);
     }
-
+    
     while(!Q.empty())
     {
         auto u=EXTRACT_MIN(Q,G); 
@@ -158,15 +158,15 @@ int main()
 {
     int n;
     //数据预处理
-    auto data1=fopen("suanfa_lab\\LAB3\\ex2\\input\\input11.txt","r");
-    auto data2=fopen("suanfa_lab\\LAB3\\ex2\\input\\input12.txt","r");
-    auto data3=fopen("suanfa_lab\\LAB3\\ex2\\input\\input21.txt","r");
-    auto data4=fopen("suanfa_lab\\LAB3\\ex2\\input\\input22.txt","r");
-    auto data5=fopen("suanfa_lab\\LAB3\\ex2\\input\\input31.txt","r");
-    auto data6=fopen("suanfa_lab\\LAB3\\ex2\\input\\input32.txt","r");
-    auto data7=fopen("suanfa_lab\\LAB3\\ex2\\input\\input41.txt","r");
-    auto data8=fopen("suanfa_lab\\LAB3\\ex2\\input\\input42.txt","r");
-    if (!data1) { cout << "open failed!";system("pause");exit(0); }
+    auto data1=fopen("../input/input11.txt","r");
+    auto data2=fopen("../input/input12.txt","r");
+    auto data3=fopen("../input/input21.txt","r");
+    auto data4=fopen("../input/input22.txt","r");
+    auto data5=fopen("../input/input31.txt","r");
+    auto data6=fopen("../input/input32.txt","r");
+    auto data7=fopen("../input/input41.txt","r");
+    auto data8=fopen("../input/input42.txt","r");
+    if (!data1) { cout << "open failed!"; system("pause"); exit(0); }
     int **map1;
     map1=new int*[size1];
     for(int i=0;i<size1;i++)map1[i]=new int[size1]; 
@@ -216,14 +216,14 @@ int main()
         for(int j=0;j<size4;j++)
             {fscanf(data8,"%d",&n);fgetc(data8);if(i!=j&&n==0)n=maxl;map8[i][j]=n;}
     
-    ofstream outf1("suanfa_lab\\LAB3\\ex2\\output\\result11.txt");
-    ofstream outf2("suanfa_lab\\LAB3\\ex2\\output\\result12.txt");
-    ofstream outf3("suanfa_lab\\LAB3\\ex2\\output\\result21.txt");
-    ofstream outf4("suanfa_lab\\LAB3\\ex2\\output\\result22.txt");
-    ofstream outf5("suanfa_lab\\LAB3\\ex2\\output\\result31.txt");
-    ofstream outf6("suanfa_lab\\LAB3\\ex2\\output\\result32.txt");
-    ofstream outf7("suanfa_lab\\LAB3\\ex2\\output\\result41.txt");
-    ofstream outf8("suanfa_lab\\LAB3\\ex2\\output\\result42.txt");
+    ofstream outf1("../output/result11.txt");
+    ofstream outf2("../output/result12.txt");
+    ofstream outf3("../output/result21.txt");
+    ofstream outf4("../output/result22.txt");
+    ofstream outf5("../output/result31.txt");
+    ofstream outf6("../output/result32.txt");
+    ofstream outf7("../output/result41.txt");
+    ofstream outf8("../output/result42.txt");
     auto t1 = std::chrono::steady_clock::now();
     auto A1=JOHNSON(map1,size1);
     auto t2 = std::chrono::steady_clock::now();
@@ -249,7 +249,7 @@ int main()
     std::chrono::duration<double> time_span6 = std::chrono::duration_cast<std::chrono::duration<double>>(t7 - t6);
     std::chrono::duration<double> time_span7 = std::chrono::duration_cast<std::chrono::duration<double>>(t8 - t7);
     std::chrono::duration<double> time_span8 = std::chrono::duration_cast<std::chrono::duration<double>>(t9 - t8);
-    ofstream outftime("suanfa_lab\\LAB3\\ex2\\output\\time.txt");
+    ofstream outftime("../output/time.txt");
     outftime<<time_span1.count()<<"s"<<endl;
     outftime<<time_span2.count()<<"s"<<endl;
     outftime<<time_span3.count()<<"s"<<endl;

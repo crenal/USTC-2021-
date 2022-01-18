@@ -70,15 +70,15 @@ int BELLMAN_FORD(node *result,int** map,int s,int size)
 int main()
 {
     int n;
-    auto data1=fopen("suanfa_lab\\LAB3\\ex1\\input\\input11.txt","r");
-    auto data2=fopen("suanfa_lab\\LAB3\\ex1\\input\\input12.txt","r");
-    auto data3=fopen("suanfa_lab\\LAB3\\ex1\\input\\input21.txt","r");
-    auto data4=fopen("suanfa_lab\\LAB3\\ex1\\input\\input22.txt","r");
-    auto data5=fopen("suanfa_lab\\LAB3\\ex1\\input\\input31.txt","r");
-    auto data6=fopen("suanfa_lab\\LAB3\\ex1\\input\\input32.txt","r");
-    auto data7=fopen("suanfa_lab\\LAB3\\ex1\\input\\input41.txt","r");
-    auto data8=fopen("suanfa_lab\\LAB3\\ex1\\input\\input42.txt","r");
-    if(!data1){cout<<"open failed!";exit(0);}
+    auto data1=fopen("../input/input11.txt","r");
+    auto data2=fopen("../input/input12.txt","r");
+    auto data3=fopen("../input/input21.txt","r");
+    auto data4=fopen("../input/input22.txt","r");
+    auto data5=fopen("../input/input31.txt","r");
+    auto data6=fopen("../input/input32.txt","r");
+    auto data7=fopen("../input/input41.txt","r");
+    auto data8=fopen("../input/input42.txt","r");
+    if(!data1){cout<<"open failed!"; system("pause");exit(0);}
     node result11[size1];
     node result12[size1];
     node result21[size2];
@@ -160,7 +160,7 @@ int main()
     std::chrono::duration<double> time_span6 = std::chrono::duration_cast<std::chrono::duration<double>>(t7 - t6);
     std::chrono::duration<double> time_span7 = std::chrono::duration_cast<std::chrono::duration<double>>(t8 - t7);
     std::chrono::duration<double> time_span8 = std::chrono::duration_cast<std::chrono::duration<double>>(t9 - t8);
-    ofstream outftime("suanfa_lab\\LAB3\\ex1\\output\\time.txt");
+    ofstream outftime("../output/time.txt");
     outftime<<time_span1.count()<<"s"<<endl;
     outftime<<time_span2.count()<<"s"<<endl;
     outftime<<time_span3.count()<<"s"<<endl;
@@ -169,7 +169,7 @@ int main()
     outftime<<time_span6.count()<<"s"<<endl;
     outftime<<time_span7.count()<<"s"<<endl;
     outftime<<time_span8.count()<<"s"<<endl;
-    ofstream outf1("suanfa_lab\\LAB3\\ex1\\output\\result11.txt");
+    ofstream outf1("../output/result11.txt");
     if(!outf1){cout<<"outfile failed";}
     for(int i=1;i<size1;i++)
     {
@@ -194,7 +194,7 @@ int main()
             outf1<<endl;
         }
     }
-    ofstream outf2("suanfa_lab\\LAB3\\ex1\\output\\result12.txt");
+    ofstream outf2("../output/result12.txt");
     if(!outf2){cout<<"outfile failed";}
     for(int i=1;i<size1;i++)
     {
@@ -219,7 +219,7 @@ int main()
             outf2<<endl;
         }
     }
-    ofstream outf3("suanfa_lab\\LAB3\\ex1\\output\\result21.txt");
+    ofstream outf3("../output/result21.txt");
     if(!outf3){cout<<"outfile failed";}
     for(int i=1;i<size2;i++)
     {
@@ -244,7 +244,7 @@ int main()
             outf3<<endl;
         }
     }
-    ofstream outf4("suanfa_lab\\LAB3\\ex1\\output\\result22.txt");
+    ofstream outf4("../output/result22.txt");
     if(!outf4){cout<<"outfile failed";}
     for(int i=1;i<size2;i++)
     {
@@ -269,7 +269,7 @@ int main()
             outf4<<endl;
         }
     }
-    ofstream outf5("suanfa_lab\\LAB3\\ex1\\output\\result31.txt");
+    ofstream outf5("../output/result31.txt");
     if(!outf5){cout<<"outfile failed";}
     for(int i=1;i<size3;i++)
     {
@@ -294,7 +294,7 @@ int main()
             outf5<<endl;
         }
     }
-    ofstream outf6("suanfa_lab\\LAB3\\ex1\\output\\result32.txt");
+    ofstream outf6("../output/result32.txt");
     if(!outf6){cout<<"outfile failed";}
     for(int i=1;i<size3;i++)
     {
@@ -319,7 +319,7 @@ int main()
             outf6<<endl;
         }
     }
-    ofstream outf7("suanfa_lab\\LAB3\\ex1\\output\\result41.txt");
+    ofstream outf7("../output/result41.txt");
     if(!outf7){cout<<"outfile failed";}
     for(int i=1;i<size4;i++)
     {
@@ -344,8 +344,8 @@ int main()
             outf7<<endl;
         }
     }
-    ofstream outf8("suanfa_lab\\LAB3\\ex1\\output\\result42.txt");
-    if(!outf8){cout<<"outfile failed";}
+    ofstream outf8("../output/result42.txt");
+    if(!outf8){cout<<"outfile failed"; system("pause");}
     for(int i=1;i<size4;i++)
     {
         if(result42[i].d<9999)
