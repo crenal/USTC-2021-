@@ -28,8 +28,8 @@ int *COMPUTE_PREFIX_FUNCTION(vector<char> P)
    }
    return(u);
 }
-ofstream outf("./output/result.txt");
-ofstream outf2("./output/time.txt");
+ofstream outf("../output/result.txt");
+ofstream outf2("../output/time.txt");
 void KMP_MATCHER(vector<char> T,vector<char> P)
 {
     auto t1 = std::chrono::steady_clock::now();
@@ -67,7 +67,7 @@ void KMP_MATCHER(vector<char> T,vector<char> P)
 }
 int main()
 {
-    auto data=fopen("./input/4_1_input.txt","r");
+    auto data=fopen("../input/4_1_input.txt","r");
     if(!data){cout<<"open file failed!"<<endl;system("pause");exit(0);}
     vector<char> T;
     vector<char> P;
