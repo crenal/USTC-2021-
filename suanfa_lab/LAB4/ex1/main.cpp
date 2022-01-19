@@ -29,8 +29,10 @@ int *COMPUTE_PREFIX_FUNCTION(vector<char> P)
    return(u);
 }
 ofstream outf("./output/result.txt");
+ofstream outf2("./output/time.txt");
 void KMP_MATCHER(vector<char> T,vector<char> P)
 {
+    auto t1 = std::chrono::steady_clock::now();
     int a[2];int o=0;
     auto n=T.size();
     auto m=P.size();
@@ -58,6 +60,10 @@ void KMP_MATCHER(vector<char> T,vector<char> P)
     for(int i=0;i<2;i++)outf<<a[i]<<" ";
     outf<<endl;
     outf<<endl;
+    auto t2 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> time_span = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+
+    outf2<<time_span.count()<<endl;
 }
 int main()
 {
